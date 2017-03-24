@@ -26,9 +26,11 @@
 </head>
 <body>
 <div ng-app="myApp" ng-controller="myCtrl">
-    <h1>Real Time Data Collection</h1>
     <div class="row">
         <div class="col-md-12">
+            <h1>Real Time Data Collection
+                <small id="status" style="color:red">{{status}}</small>
+            </h1>
             <table class="table">
                 <tr style="font-weight: bolder">
                     <td>Sensor Key</td>
