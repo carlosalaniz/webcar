@@ -8,9 +8,12 @@
   </head>
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
-      <table>
+      <table border="1">
+      <tr style="font-weight: bolder">
+          <td>Sensor Key</td> <td> Value </td>
+      </tr>
       <tr ng-repeat="(key, value) in lastMessage">
-          <td> {{key}} </td> <td> {{ value }} </td>
+          <td> {{getName(key)}} </td> <td> {{ value }} {{getUnit(key)}} </td>
       </tr>
       </table>
     </div>
