@@ -8,7 +8,7 @@ app.controller('myCtrl', ['$scope', 'MqttClient', function($scope, MqttClient) {
     MqttClient.init(ip, port, id);
     MqttClient.connect({onSuccess: successCallback});
     function successCallback() {
-      MqttClient.subscribe('');
+      MqttClient.subscribe('92361f002671/mazda01');
       message = new Paho.MQTT.Message("Hello");
       message.destinationName = "92361f002671/mazda01";
       MqttClient.send(message);
