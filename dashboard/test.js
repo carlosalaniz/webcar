@@ -26,8 +26,8 @@ app.controller('myCtrl', ['$scope', 'MqttClient', function ($scope, MqttClient) 
     }
     $scope.lastMessage = {};
     $scope.status = "Offline"
-    var ip = "broker.hivemq.com";
-    var port = "8000";
+    var ip = "test.mosquitto.org";
+    var port = "8080";
     var id = "clientId-yzUBL20ktx";
     MqttClient.init(ip, port, id);
     MqttClient.connect({onSuccess: successCallback});
