@@ -7,8 +7,8 @@ app.controller('myCtrl', ['$scope', 'MqttClient', function ($scope, MqttClient) 
     $scope.getName = function (key) {
         // console.log(nameMap);
         if (key[0] !== 'k') return key;
-        var kk = key.substring(1);
-        if (kk.length < 2) kk = "0" + kk;
+        var kk = key.substring(1); // this is non-sensical
+        if (kk.length < 2) kk = "0" + kk; 
         var objKey = 'userFullName' + kk;
         console.log(objKey);
 
